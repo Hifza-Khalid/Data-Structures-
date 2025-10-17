@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hacktoberfest 2025 — Join & Contribute</title>
+  <meta name="description" content="Hacktoberfest 2025 — a one-page guide to get started: how to participate, tips, project ideas and resources." />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <!-- If you don't have a Font Awesome kit, fallback to free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yH1XfK2QY5o2fR+0z1Ywz6q2Y6p5Dg3z0q8bq2iQw5K1Yv1e6e5Kc1x1zZ1e2x2Y1o1G1Z1a1" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+  <!-- Styles (single-file, clean modern look, purple/orange theme) -->
+  <style>
+    :root{
+      --bg:#0f1724; /* deep navy */
+      --card:#0b1220;
+      --muted:#98a0b3;
+      --accent:#ff7a18; /* warm orange */
+      --accent-2:#7c3aed; /* purple */
+      --glass: rgba(255,255,255,0.04);
+      --radius:16px;
+      color-scheme: dark;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg, #071226 0%, #071025 60%);color:#e6eef8}
+    a{color:var(--accent-2);text-decoration:none}
+    .container{max-width:1100px;margin:30px auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent-2),var(--accent));display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(124,58,237,0.18)}
+    .logo i{font-size:22px;color:white}
+    h1{font-size:20px;margin:0}
+    .tag{font-size:12px;color:var(--muted)}
+
+    nav{display:flex;gap:10px}
+    .btn{background:linear-gradient(90deg,var(--accent-2),var(--accent));border:none;color:white;padding:10px 14px;border-radius:12px;font-weight:600;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;margin-top:28px;align-items:center}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:22px;border-radius:var(--radius);box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    .hero-left h2{font-size:34px;margin:0 0 8px}
+    .lead{color:var(--muted);line-height:1.5}
+
+    .cta-row{display:flex;gap:12px;margin-top:16px}
+
+    .stats{display:flex;gap:12px;margin-top:18px}
+    .stat{background:var(--glass);padding:10px 12px;border-radius:12px;min-width:110px;text-align:center}
+    .stat strong{display:block;font-size:18px}
+    .stat small{color:var(--muted)}
+
+    .hero-right img{width:100%;border-radius:12px;display:block}
+
+    section{margin-top:26px}
+    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+
+    .feature{display:flex;gap:12px;align-items:flex-start}
+    .icon-circle{width:48px;height:48px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));display:flex;align-items:center;justify-content:center;font-size:18px}
+    .feature h3{margin:0;font-size:16px}
+    .feature p{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+    .projects .card{padding:14px}
+    .project-item{display:flex;gap:12px;align-items:center}
+    .project-item img{width:64px;height:64px;border-radius:8px;object-fit:cover}
+    .project-item h4{margin:0}
+    .project-item p{margin:4px 0 0;color:var(--muted);font-size:13px}
+
+    .cta-join{display:flex;gap:12px;align-items:center}
+
+    footer{margin-top:36px;padding:18px;border-radius:14px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.008));display:flex;justify-content:space-between;align-items:center}
+    footer small{color:var(--muted)}
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+    }
+
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:600}
+    .chip{padding:6px 8px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);font-size:13px}
+
+    .faq q{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><i class="fa-solid fa-code-branch"></i></div>
+        <div>
+          <h1>Hacktoberfest 2025 — Quick Guide</h1>
+          <div class="tag">Open source month • Make 6 accepted PRs • Learn, contribute, grow</div>
+        </div>
+      </div>
+
+      <nav>
+        <a class="btn" href="https://hacktoberfest.com" target="_blank" rel="noopener">Official Site</a>
+        <a class="btn ghost" href="#how">How to</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left card">
+        <h2>Join Hacktoberfest 2025 — Contribute to open source</h2>
+        <p class="lead">Hacktoberfest is a month-long celebration that brings beginners and pros together to help maintainers and improve open-source projects. Contributions include code, docs, translations, design, and more.</p>
+
+        <div class="cta-row">
+          <a class="btn" href="https://hacktoberfest.com/participation" target="_blank" rel="noopener"><i class="fa-solid fa-rocket"></i> Get Started</a>
+          <a class="btn ghost" href="https://github.com" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Find Projects</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat"><strong>6</strong><small>Accepted PRs</small></div>
+          <div class="stat"><strong>Badge</strong><small>Digital Reward</small></div>
+          <div class="stat"><strong>T-shirt</strong><small>First 10k</small></div>
+        </div>
+
+        <div style="margin-top:18px">
+          <h3>Quick tips</h3>
+          <ul style="color:var(--muted);line-height:1.6">
+            <li>Start with issues labelled <span class="chip">good first issue</span> or <span class="chip">documentation</span>.</li>
+            <li>Read the project's CONTRIBUTING.md and CODE_OF_CONDUCT.</li>
+            <li>Make meaningful, well-described PRs — small & helpful changes are perfect.</li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="hero-right card">
+        <img alt="Hacktoberfest community" src="https://images.unsplash.com/photo-1523475496153-3d6cc9a7b2c7?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2b8b2a7f7a9a3f3b9f8c" />
+        <p style="margin-top:12px;color:var(--muted);font-size:13px">Photo: Open-source community working together. (Unsplash)</p>
+      </aside>
+    </section>
+
+    <section id="how" class="card">
+      <h2>How to participate</h2>
+      <div class="grid-3" style="margin-top:12px">
+        <div>
+          <div class="feature">
+            <div class="icon-circle"><i class="fa-solid fa-user-plus"></i></div>
+            <div>
+              <h3>1. Register</h3>
+              <p>Sign up at the Hacktoberfest website so your PRs are tracked and eligible for rewards.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="feature">
+            <div class="icon-circle"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div>
+              <h3>2. Find projects</h3>
+              <p>Search on GitHub/GitLab for labels like <em>hacktoberfest</em>, <em>help wanted</em>, or <em>good first issue</em>.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="feature">
+            <div class="icon-circle"><i class="fa-solid fa-pencil"></i></div>
+            <div>
+              <h3>3. Make contributions</h3>
+              <p>Open PRs for fixes, documentation, translations, or small features. Keep PRs focused and respectful.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="projects card">
+      <h2>Starter project ideas</h2>
+      <div style="margin-top:12px" class="grid-3">
+        <div class="project-item">
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=6b4f" alt="docs" />
+          <div>
+            <h4>Docs & Guides</h4>
+            <p>Improve README, add code samples, or write contributor-friendly guides.</p>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=7f1b" alt="ui" />
+          <div>
+            <h4>UI Fixes</h4>
+            <p>Tiny stylesheet fixes, accessibility improvements, or responsive tweaks.</p>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <img src="https://images.unsplash.com/photo-1526378723464-6f3a2b3f21c9?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=5a1c" alt="code" />
+          <div>
+            <h4>Bugfixes & Tests</h4>
+            <p>Fix a failing test, refactor a small function, or add unit tests.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:18px">
+      <h2>Dos & Don'ts</h2>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:10px">
+        <div style="flex:1;min-width:260px">
+          <h4>Do</h4>
+          <ul style="color:var(--muted);line-height:1.6">
+            <li>Explain your changes clearly in the PR description.</li>
+            <li>Link related issues and tests.</li>
+            <li>Be patient and polite with maintainers.</li>
+          </ul>
+        </div>
+        <div style="flex:1;min-width:260px">
+          <h4>Don't</h4>
+          <ul style="color:var(--muted);line-height:1.6">
+            <li>Don't open spammy or trivial PRs that add no value.</li>
+            <li>Don't ignore contribution guidelines.</li>
+            <li>Don't claim credit for work you didn't do.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:18px">
+      <h2>FAQ</h2>
+      <div style="margin-top:10px;color:var(--muted);line-height:1.6" class="faq">
+        <p><strong>Q:</strong> What counts as an accepted PR? <br><q>An accepted PR is one that has been merged by a project maintainer or explicitly accepted per the project's rules.</q></p>
+        <p><strong>Q:</strong> Can documentation count? <br><q>Yes — docs, translations, and design contributions are valid if the project maintainer accepts them.</q></p>
+        <p><strong>Q:</strong> Where can I get help? <br><q>Look for community channels, Discord/Slack links on the project repo, or ask maintainers politely on the issue/PR.</q></p>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <div style="display:flex;gap:10px;align-items:center">
+          <div class="badge">Hacktoberfest 2025</div>
+          <div style="color:var(--muted);font-size:13px;margin-left:6px">Make 6 accepted PRs • Tree planted per contributor</div>
+        </div>
+      </div>
+      <div>
+        <small>Made with ❤️ • <a href="https://hacktoberfest.com" target="_blank" rel="noopener">hacktoberfest.com</a></small>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
